@@ -1,0 +1,18 @@
+﻿@page
+@model readapi.Pages.UsersModel
+@{
+}
+
+<h1>Users</h1>
+<div>
+
+    @foreach (var claim in User.Claims)
+    {
+        <div>@claim.Type: @claim.Value</div>
+
+    }
+    @foreach (var name in Model.UserNames)
+    {
+        <div>@name</div>
+    }
+</div>
