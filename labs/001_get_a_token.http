@@ -1,0 +1,18 @@
+@scope=openid+https://graph.microsoft.com/user.read
+@redirect_uri=https://httpbin.org/anything
+
+GET https://login.microsoftonline.com/aaaaws.com/oauth2/v2.0/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code
+&client_id=62fe3e05-8922-4f26-b94c-b6696cd3be98
+&scope={{scope}}
+&redirect_uri={{redirect_uri}}
+&client_secret=tdi8Q~2tgMrONPVCfXkOrrcKIJ1DgaNvrLpmtdfn
+&code=
+
+
+###
+
+GET https://graph.microsoft.com/v1.0/me
+Authorization: bearer 
