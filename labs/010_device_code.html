@@ -2986,6 +2986,11 @@ body,
 <pre><code class="language-bash">az ad app create --display-name &lt;app-name&gt;
 </code></pre>
 <p>Take note of the <code>appId</code> in the output as you'll need this later.</p>
+<p>Enable public client flows:</p>
+<p>On the Authentication page, scroll down to the Advanced settings section and toggle the switch for Allow public client flows to Yes.</p>
+<p>You can also enable it from the command line:</p>
+<pre><code class="language-bash">az ad app update --<span class="hljs-built_in">id</span> &lt;app-id&gt; --<span class="hljs-built_in">set</span> oauth2AllowPublicClient=<span class="hljs-literal">true</span>
+</code></pre>
 <p>Give it application permissions to the User.Read.All scope and grant it admin consent.</p>
 <p><strong>Step 3: Create a console application</strong></p>
 <p>3.1. Create a new .NET console application (replace <code>&lt;app-name&gt;</code> with your preferred name):</p>
