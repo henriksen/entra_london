@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">The forecast</h1>
+    @if (Model.Forecasts != null)
+    {
+        foreach (var item in Model.Forecasts)
+        {
+            <p>@item.Date: @item.TemperatureC</p>
+
+        }
+    }
+    else
+    {
+        <p class="lead">No forecast available.</p>
+    }
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
